@@ -58,6 +58,6 @@ $sql_str = "INSERT INTO `products` (`id`, `name`, `slug`, `description`, `summar
 // thuc thi cau lenh
 $result = mysqli_query($con, $sql_str);
 //tro ve trang
-header("location: listsanpham.php");
+header("location: ./listsanpham.php");
 
 ?>
