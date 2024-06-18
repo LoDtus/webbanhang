@@ -60,14 +60,14 @@
             <ul>
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/shop.php">Shop</a></li>
-                <li><a href="#">Pages</a>
+                <!-- <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details.html">Shop Details</a></li>
                         <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                         <li><a href="./blog-details.html">Blog Details</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
@@ -138,14 +138,14 @@
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="/shop.php">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <!-- <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                     <li><a href="./checkout.html">Check Out</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="./blog.html">Blog</a></li>
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
@@ -155,9 +155,26 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="./cart.php"><i class="fa fa-shopping-bag"></i> <span>
+                                        <?php
+                                        $cart = [];
+                                        if (isset($_SESSION['cart'])) {
+                                            $cart = $_SESSION['cart'];
+                                        }
+                                        $count = 0;
+                                        $tongtien = 0;
+                                        foreach ($cart as $item) {//hien thi so luong san pham trong gio hang
+                                            $count += $item['qty'];
+                                            $tongtien += $item['qty'] * $item['disscounted_price'];
+                                        }
+                                        //hien thi so luong
+                                        echo $count;
+                                        ?>
+                                    </span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price">Tổng tiền
+                            <span><?= number_format($tongtien, 0, '', '.') . "VND" ?></span>
+                        </div>
                     </div>
                 </div>
             </div>

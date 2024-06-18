@@ -1,4 +1,5 @@
 <?php
+session_start();
 $is_homepage = false;
 require_once ('components/header.php');
 require_once ('./db/conn.php');
