@@ -66,7 +66,7 @@ require_once ('components/header.php');
                     <ul>
                         <li class="active" data-filter="*">All</li>
                         <?php
-                        $sql_str = "select * from products,categories where products.category_id=categories.id ";
+                        $sql_str = "select * from categories order by name ";
                         $result = mysqli_query($con, $sql_str);
                         while ($row = mysqli_fetch_assoc($result)) {
 
@@ -80,7 +80,7 @@ require_once ('components/header.php');
         </div>
         <div class="row featured__filter">
             <?php
-            $sql_str = "select products.id as pid,  products.name  as pname,images,price,categories.slug as cslug from products,categories where products.category_id=categories.id";
+            $sql_str = "select products.id as pid,  products.name  as pname,images,disscounted_price,price,categories.slug as cslug from products,categories where products.category_id=categories.id";
             $result = mysqli_query($con, $sql_str);
             while ($row = mysqli_fetch_assoc($result)) {
                 $anh_arr = explode(';', $row['images']);
@@ -97,7 +97,11 @@ require_once ('components/header.php');
                         <div class="featured__item__text">
                             <h6><a href="sanpham.php?id=<?= $row['pid'] ?>"><?= $row['pname'] ?></a>
                             </h6>
-                            <h5><?= $row['price'] ?></h5>
+                            <div class="prices">
+                                <!-- <span class="old"><?= $row['price'] ?></span> -->
+                                <span
+                                    class="curr"><?= number_format($row['disscounted_price'], 0, '', '.') . " VNĐ" ?></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +132,7 @@ require_once ('components/header.php');
 <!-- Banner End -->
 
 <!-- Latest Product Section Begin -->
-<section class="latest-product spad">
+<!-- <section class="latest-product spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -328,7 +332,7 @@ require_once ('components/header.php');
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Latest Product Section End -->
 
 <!-- Blog Section Begin -->

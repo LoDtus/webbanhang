@@ -45,7 +45,7 @@ if (isset($_POST['btnUpdate'])){
         $extension = strtolower($extension);
 
         ## File upload allowed extensions
-        $valid_extensions = array("jpg","jpeg","png");
+        $valid_extensions = array("jpg","jpeg","png","webp");
 
         $response = 0;
         ## Check file extension

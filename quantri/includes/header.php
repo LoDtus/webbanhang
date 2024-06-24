@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    die();
+}
+//kiem tra neu khong co session user thi khong cho phep vao trang quan tri
+?>
 <!DOCTYPE html>
 <html lang="en">
 

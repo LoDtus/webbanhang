@@ -14,20 +14,20 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Brand</th>
+                            <th>Thương Hiệu</th>
                             <th>Slug</th>
 
-                            <th>Status</th>
-                            <th>Operation</th>
+                            <th>Trạng Thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Brand</th>
+                            <th>Thương Hiệu</th>
                             <th>Slug</th>
 
-                            <th>Status</th>
-                            <th>Operation</th>
+                            <th>Trạng Thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -45,12 +45,12 @@
                                 <td><?= $row['status'] ?></td>
                                 <td>
                                     <a class="btn btn-warning" href="editbrand.php?id=<?= $row['id'] ?>">
-                                        Edit
+                                        Sửa
 
                                     </a>
                                     <a class="btn btn-danger" href="deletebrand.php?id=<?= $row['id'] ?>"
                                         onclick="return confirm('Bạn chắc chắn muốn xóa thương hiệu này?');">
-                                        Delete
+                                        Xóa
                                     </a>
                                 </td>
 

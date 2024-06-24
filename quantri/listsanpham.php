@@ -64,12 +64,12 @@ function anhdaidien($arraystr, $height)
                                 <td><?= $row['pstatus'] ?></td>
                                 <td>
                                     <a class="btn btn-warning" href="editproduct.php?id=<?= $row['pid'] ?>">
-                                        Edit
+                                        Sửa
 
                                     </a>
                                     <a class="btn btn-danger" href="deleteproduct.php?id=<?= $row['pid'] ?>"
                                         onclick="return confirm('Bạn chắc chắn muốn xóa danh mục này?');">
-                                        Delete
+                                        Xóa
                                     </a>
                                 </td>
 

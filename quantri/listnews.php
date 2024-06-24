@@ -61,12 +61,12 @@ function anhdaidien($arraystr, $height)
 
                                 <td>
                                     <a class="btn btn-warning" href="editnews.php?id=<?= $row['nid'] ?>">
-                                        Edit
+                                        Sửa
 
                                     </a>
                                     <a class="btn btn-danger" href="deletenews.php?id=<?= $row['nid'] ?>"
                                         onclick="return confirm('Bạn chắc chắn muốn xóa tin tức này?');">
-                                        Delete
+                                        Xóa
                                     </a>
                                 </td>
 

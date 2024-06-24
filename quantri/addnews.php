@@ -25,7 +25,7 @@ $extension = pathinfo($location, PATHINFO_EXTENSION);
 $extension = strtolower($extension);
 
 ## File upload allowed extensions
-$valid_extensions = array("jpg", "jpeg", "png");
+$valid_extensions = array("jpg", "jpeg", "png", "webp");
 
 $response = 0;
 ## Check file extension

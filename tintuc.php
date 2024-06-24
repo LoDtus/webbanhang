@@ -97,7 +97,7 @@ $anh = $row['avatar'];
             </div>
             <div class="col-lg-8 col-md-7 order-md-1 order-1">
                 <div class="blog__details__text">
-                    <img src="<?= 'quantri/' . $row['avatar'] ?>" alt="">
+                    <img src="<?= 'quantri/' . $row['avatar'] ?>" width="1000px" alt="">
                     <?= $row['description'] ?>
                 </div>
                 <!-- <div class="blog__details__content">
@@ -165,7 +165,7 @@ $anh = $row['avatar'];
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
                             <h5><a href="tintuc.php?id=<?= $row4['id'] ?>"><?= $row4['title'] ?></a></h5>
-                            <?= $row4['description'] ?>
+                            <?= $row4['sumary'] ?>
                         </div>
                     </div>
                 </div>
