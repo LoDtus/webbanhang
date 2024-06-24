@@ -16,20 +16,20 @@ require ('includes/header.php');
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Tên sản phẩm</th>
                             <th>Slug</th>
 
-                            <th>Status</th>
-                            <th>Operation</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Name</th>
+                            <th>Tên sản phẩm</th>
                             <th>Slug</th>
 
-                            <th>Status</th>
-                            <th>Operation</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -47,12 +47,12 @@ require ('includes/header.php');
                                 <td><?= $row['status'] ?></td>
                                 <td>
                                     <a class="btn btn-warning" href="editcategory.php?id=<?= $row['id'] ?>">
-                                        Edit
+                                        Sửa
 
                                     </a>
                                     <a class="btn btn-danger" href="deletecategory.php?id=<?= $row['id'] ?>"
                                         onclick="return confirm('Bạn chắc chắn muốn xóa danh mục này?');">
-                                        Delete
+                                        Xóa
                                     </a>
                                 </td>
 

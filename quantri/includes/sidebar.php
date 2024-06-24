@@ -71,6 +71,35 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDMTT" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-calendar-day"></i>
+            <span>Danh mục tin tức</span>
+        </a>
+        <div id="collapseDMTT" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Các chức năng:</h6>
+                <a class="collapse-item" href="./listnewscats.php">Liệt kê</a>
+                <a class="collapse-item" href="./themdanhmuctintuc.php">Thêm mới</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTT" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fab fa-product-hunt"></i>
+            <span>Tin tức</span>
+        </a>
+        <div id="collapseTT" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Các chức năng:</h6>
+                <a class="collapse-item" href="./listnews.php">Liệt kê</a>
+                <a class="collapse-item" href="./themtintuc.php">Thêm mới</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
             aria-controls="collapseTwo">
             <i class="fas fa-wallet"></i>
@@ -79,7 +108,7 @@
         <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Các chức năng:</h6>
-                <a class="collapse-item" href="buttons.html">Liệt kê</a>
+                <a class="collapse-item" href="./listorders.php">Liệt kê</a>
                 <a class="collapse-item" href="cards.html">Thêm mới</a>
             </div>
         </div>
@@ -94,8 +123,8 @@
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Các chức năng:</h6>
-                <a class="collapse-item" href="buttons.html">Liệt kê</a>
-                <a class="collapse-item" href="cards.html">Thêm mới</a>
+                <a class="collapse-item" href="./listusers.php">Liệt kê</a>
+                <a class="collapse-item" href="./themuser.php">Thêm mới</a>
             </div>
         </div>
     </li>
