@@ -12,7 +12,7 @@ require_once ('components/header.php');
                 <div class="breadcrumb__text">
                     <h2>Organi Shop</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
+                        <a href="/index.php">Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ require_once ('components/header.php');
                                 <li><a href="#">Oatmeal</a></li> -->
                         </ul>
                     </div>
-                    <div class="sidebar__item">
+                    <!-- <div class="sidebar__item">
                         <h4>Price</h4>
                         <div class="price-range-wrap">
                             <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
@@ -69,8 +69,8 @@ require_once ('components/header.php');
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="sidebar__item sidebar__item__color--option">
+                    </div> -->
+                    <!-- <div class="sidebar__item sidebar__item__color--option">
                         <h4>Colors</h4>
                         <div class="sidebar__item__color sidebar__item__color--white">
                             <label for="white">
@@ -108,8 +108,8 @@ require_once ('components/header.php');
                                 <input type="radio" id="green">
                             </label>
                         </div>
-                    </div>
-                    <div class="sidebar__item">
+                    </div> -->
+                    <!-- <div class="sidebar__item">
                         <h4>Popular Size</h4>
                         <div class="sidebar__item__size">
                             <label for="large">
@@ -135,7 +135,7 @@ require_once ('components/header.php');
                                 <input type="radio" id="tiny">
                             </label>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="sidebar__item">
                         <div class="latest-product__text">
                             <h4>Sản phẩm mới nhất</h4>
@@ -155,7 +155,8 @@ require_once ('components/header.php');
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6><?= $row['name'] ?></h6>
-                                                <span><?= $row['price'] ?></span>
+
+                                                <span> <?= number_format($row['price'], 0, '', '.') . " VNĐ" ?></span>
                                             </div>
                                         </a>
                                     <?php } ?>
@@ -215,7 +216,9 @@ require_once ('components/header.php');
                                             <h5><a href="sanpham.php?id=<?= $row['pid'] ?>"><?= $row['pname'] ?></a>
                                             </h5>
                                             <div class="product__item__price">
-                                                <?= $row['disscounted_price'] ?><span><?= $row['price'] ?></span>
+
+
+                                                <?= number_format($row['disscounted_price'], 0, '', '.') . " VNĐ" ?><span><?= number_format($row['price'], 0, '', '.') . " VNĐ" ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -270,7 +273,8 @@ require_once ('components/header.php');
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="sanpham.php?id=<?= $row['id'] ?>"><?= $row['name'] ?></a></h6>
-                                    <h5><?= $row['price'] ?></h5>
+
+                                    <h5><?= number_format($row['price'], 0, '', '.') . " VNĐ" ?></h5>
                                 </div>
                             </div>
                         </div>

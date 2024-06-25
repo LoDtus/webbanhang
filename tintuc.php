@@ -68,7 +68,7 @@ $anh = $row['avatar'];
                             while ($row3 = mysqli_fetch_assoc($result3)) {
                                 ?>
 
-                                <a href="#" class="blog__sidebar__recent__item">
+                                <a href="tintuc.php?id=<?= $row3['id'] ?>" class="blog__sidebar__recent__item">
                                     <div class="blog__sidebar__recent__item__pic">
                                         <img src="<?= 'quantri/' . $row3['avatar'] ?>" width="70px" alt="">
                                     </div>
