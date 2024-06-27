@@ -203,8 +203,7 @@ while ($row = mysqli_fetch_assoc($result)){
     $sql_str = "select * from products where
         
         name like '%$tukhoa%' 
-        or description like '%$tukhoa%'
-        or summary like '%$tukhoa%'
+        
     order by name";
  } else {
     $sql_str = "select * from products where
